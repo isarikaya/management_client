@@ -24,9 +24,17 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/lib/font-awesome.css",
+              "src/assets/css/lib/google-font.css",
+              "src/assets/css/core/theme.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/lib/jquery.min.js",
+              "src/assets/js/lib/bootstrap.bundle.min.js",
+              "src/assets/js/lib/jquery.easing.min.js",
+              "src/assets/js/core/theme.js"
+            ]
           },
           "configurations": {
             "production": {
