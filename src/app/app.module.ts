@@ -2,7 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+
+const routes: Routes = [{
+  path: '',
+  children: [
+    {
+      path: '',
+      loadChildren: './manage/manage.module#ManageModule'
+    }
+  ]
+}];
 
 @NgModule({
   declarations: [
@@ -10,7 +21,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
