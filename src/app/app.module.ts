@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
+import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
+
 const routes: Routes = [{
   path: '',
   children: [
@@ -24,6 +26,7 @@ const routes: Routes = [{
     AppRoutingModule,
     RouterModule,
     RouterModule.forRoot(routes),
+    SlimLoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
